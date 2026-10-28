@@ -41,13 +41,18 @@ body {
 }
 
 /* --- Main Grid --- */
-.site-main {
+site-main {
     display: grid;
-    /* Creates 3 equal width columns for the desktop view */
-    grid-template-columns: repeat(3, 1fr);
+    /* 1. Default to 1 stack column for smaller screens */
+    grid-template-columns: 1fr;
     gap: 30px;
     align-items: start;
 }
+/* 2. Switch to 3 equal width columns for desktop screens */
+@media (min-width: 768px) {
+    .site-main {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
 /* --- Article Cards Grid --- */
 .card {
