@@ -41,13 +41,13 @@ body {
 }
 
 /* --- Main Grid --- */
-site-main {
-    display: grid;
-    /* 1. Default to 1 stack column for smaller screens */
-    grid-template-columns: 1fr;
-    gap: 30px;
-    align-items: start;
+.site-main {
+  display: grid;
+  /* Creates three equal columns side-by-side */
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
+
 /* 2. Switch to 3 equal width columns for desktop screens */
 @media (min-width: 768px) {
     .site-main {
